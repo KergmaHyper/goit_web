@@ -1,6 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   background-color: #f3f5f9;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 80px 5%;
 }
 
 /* experience-sec */
@@ -8,6 +19,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 33%;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 34%;
+  margin-left: 72px;
 }
 
 .my-projects-link {
@@ -52,4 +72,124 @@ body {
 
 .tech-icon-marge {
   margin-bottom: 32px;
+}
+
+.p_desc {
+  height: 24px;
+}
+
+.p_marg {
+  margin-top: 8px;
+}
+
+.my-prof {
+  /* head1 */
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  /* or 100% */
+
+  /* header */
+
+  color: #1a1a1a;
+}
+
+.marg-top32px {
+  margin-top: 32px;
+}
+
+.marg-top76px {
+  margin-top: 76px;
+}
+.marg-top16px {
+  margin-top: 16px;
+}
+.marg-top4px {
+  margin-top: 4px;
+}
+.my-name {
+  /* head2 */
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* body text */
+
+  color: #4f4f4f;
+}
+
+.my-add-info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fffefe;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
+
+.my-add-info-contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  padding: 4px 16px;
+  background: #2f80ed;
+}
+
+.my-origin {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  /* body text */
+
+  color: #4f4f4f;
+}
+
+.my-skill-head {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+
+  /* header */
+
+  color: #1a1a1a;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.my-list-skill {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* color: #4f4f4f; */
+  color: #2f80ed;
+  list-style: disc;
+}
+.it-list-skill-color {
+  color: #4f4f4f;
+}
+.li-padd {
+  padding-left: 16px;
 }
