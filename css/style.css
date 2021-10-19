@@ -30,6 +30,15 @@ body {
   margin-left: 72px;
 }
 
+/* proj price section */
+.proj-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 34%;
+  margin-left: 72px;
+}
+
 .my-projects-link {
   font-family: Montserrat;
   font-style: normal;
@@ -192,4 +201,115 @@ body {
 }
 .li-padd {
   padding-left: 16px;
+}
+
+/* .proj-price */
+
+.proj-price-form {
+  box-shadow: 8px 12px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background: #fffefe;
+  width: 364px;
+  height: 638px;
+  padding: 40px;
+}
+.head-price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f80ed;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.title-form {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+  margin-left: 0;
+  margin-bottom: 16px;
+}
+
+.proj-type-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-price-select {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+.active-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-type-head {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.check-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.check-label {
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+
+.check-item {
+  width: 24px;
+  height: 24px;
+}
+
+.price-count-head {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+  margin-top: 16px;
+}
+
+.price-count {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.send-req {
+  justify-content: center;
+  align-items: center;
+  /* padding: 12px 32px; */
+  width: 80%;
+  height: 48px;
+  background: #2f80ed;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fffefe;
+
+  margin-top: 44px;
 }
