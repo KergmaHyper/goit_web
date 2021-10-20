@@ -84,39 +84,43 @@
 
         <!-- project price -->
         <section class="proj-price-section"> 
-          <form action="#" class="proj-price-form">
+          <form class="proj-price-form" method="post" name="contact" id="proj-price-form" data-netlify="TRUE">
 
             <h4 class="head-price">Расчитать стоимость проекта</h4>
             <div class="proj-type-cont">
             <label for="proj-type" class="title-form">Тип сайта</label>
             <select name="proj-type" id="proj-type" class="proj-price-select">
+              
               <option selected value="landing-page">Landing Page</option>
-              <option value="online-store">Online Store</option>
+              
+              <option value="online-store" >Online Store</option>
               <option value="web-app">Web Application</option>
-              <option value="mobile-app">Mobile Application</option>
+              <option value="mobile-app" >Mobile Application</option>
             </div>
             </select>
+
+                 
 
             <div class="active-type">
               <p class="active-type-head">Тип работ</p>
 
               <div class="check-row">
-              <input class="check-item" type="checkbox" name="check-pm" id="check-pm">
+              <input class="check-item" type="checkbox" name="check-pm" id="pm">
               <label class="check-label" for="check-pm">PM</label>
               </div>
 
               <div class="check-row">
-              <input class="check-item" type="checkbox" name="check-design" id="check-design">
+              <input class="check-item" type="checkbox" name="check-design" id="design">
               <label class="check-label" for="check-design">Design</label>
               </div>
 
               <div class="check-row">
-              <input class="check-item" type="checkbox" name="check-dev" id="check-dev">
+              <input class="check-item" type="checkbox" name="check-devel" id="devel">
               <label class="check-label" for="check-dev">Development</label>
               </div>
 
               <div class="check-row">
-              <input class="check-item" type="checkbox" name="check-qa" id="check-qa">
+              <input class="check-item" type="checkbox" name="check-qa" id="qa">
               <label class="check-label" for="check-qa">QA</label>
               </div>
              
@@ -124,7 +128,7 @@
             </div>
             
             <p class="price-count-head">Стоимость</p>
-            <p class="price-count">$1200</p>
+            <p class="price-count"><span class="dollar">$</span><span id="total-price">0</span></p>
             <div class="send-req-cont">
               <button class="send-req">Отправить запрос</button>
             </div>
@@ -158,7 +162,7 @@
 
   </div>
 
-<div class="modal-bgd  ">
+<div class="modal-bgd">
     <div class="modal-cont modal-cont-succ">
 
     <button class="modal-close-btn">
@@ -171,5 +175,6 @@
     </div>
 </div>
 
+<script src="./js/scripts.js" ></script>
   </body>
 </html>
