@@ -9,9 +9,22 @@ body {
 }
 
 .wrapper {
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
   padding: 80px 5%;
+  position: relative;
+}
+
+/* cont info section */
+
+.cont-section {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* experience-sec */
@@ -19,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 33%;
+  width: 272px;
 }
 
 .info-section {
@@ -27,7 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 34%;
-  margin-left: 72px;
+  margin-left: 20px;
 }
 
 /* proj price section */
@@ -36,7 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 34%;
-  margin-left: 72px;
+  margin-left: 20px;
 }
 
 .my-projects-link {
@@ -209,8 +222,8 @@ body {
   box-shadow: 8px 12px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   background: #fffefe;
-  width: 364px;
-  height: 638px;
+  width: 100%px;
+  /* height: 638px; */
   padding: 40px;
 }
 .head-price {
@@ -279,6 +292,7 @@ body {
 .check-item {
   width: 24px;
   height: 24px;
+  color: #2f80ed;
 }
 
 .price-count-head {
@@ -298,18 +312,142 @@ body {
 }
 
 .send-req {
-  justify-content: center;
-  align-items: center;
-  /* padding: 12px 32px; */
-  width: 80%;
-  height: 48px;
+  padding: 12px 32px 12px 32px;
   background: #2f80ed;
   box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fffefe;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.send-req-cont {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 44px;
+}
+
+.telegram-link,
+.viber-link,
+.phone-link {
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.phone-numb {
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #000000;
+  text-decoration: none;
+}
+
+/* MODAL SECTION */
+
+.modal-bgd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(33, 33, 33, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-cont {
+  background: #fffefe;
+  mix-blend-mode: color-dodge;
+  box-shadow: 8px 12px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 80px 40px;
+  width: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal-cont-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.modal-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2f80ed;
+  margin-bottom: 32px;
+}
+
+.modal-email-label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.modal-email-input {
+  margin-bottom: 80px;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+}
+.modal-button {
+  margin-bottom: 0px;
+  background: #2f80ed;
+  box-shadow: 8px 12px 4px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   color: #fffefe;
+  border: none;
+  outline: none;
+}
 
-  margin-top: 44px;
+.modal-email-icon {
+  width: 24px;
+  height: 16px;
+  margin-bottom: 40px;
+}
+
+.modal-close-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 24px;
 }

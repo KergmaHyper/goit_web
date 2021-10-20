@@ -21,6 +21,13 @@
   <body>
 
     <div class="wrapper">
+      <!-- contact info -->
+        <section class="cont-section">
+          <a href="tg://resolve?domain=picar00n" class="telegram-link"><img src="./img/icons/telegram-icon.svg" alt=""></a>
+          <a href="viber://chat?number=%2B380954985105" class="viber-link"><img src="./img/icons/viber-icon.svg" alt=""></a>
+          <a href="tel:+380553222233" class="phone-link"><img src="./img/icons/phone-icon.svg" alt=""></a>
+          <a href="tel:+380553222233" class="phone-numb">+38 (055) 322-22-33</a>
+        </section>
 
         <!-- experience-sec -->
         <section class="experience-sec">
@@ -118,14 +125,50 @@
             
             <p class="price-count-head">Стоимость</p>
             <p class="price-count">$1200</p>
-
-            <button class="send-req">Отправить запрос</button>
-
+            <div class="send-req-cont">
+              <button class="send-req">Отправить запрос</button>
+            </div>
           </form>
         
         </section>
     
   </div>
+
+  <!-- modal screens -->
+
+  <div class="modal-bgd">
+    <div class="modal-cont">
+
+      <button class="modal-close-btn">
+        <img src="./img/icons/close-icon.svg" alt="close-icon" class="modal-close-icon">
+      </button>
+      <img src="./img/icons/mail-icon.svg" alt="email-picture" class="modal-email-icon">
+      
+      <h4 class="modal-title">Я свяжусь с Вами<br>в течении часа</h4>
+      <form action="#" class="modal-cont-form">
+
+        <label for="user-email" class="modal-email-label">E-mail:</label>
+        <input type="email" name="user-email" id="user-email" class="modal-email-input" placeholder="Укажите e-mail">
+        
+        <div class="send-req-cont">
+        <button type="submit" class="send-req">Отправить</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+<div class="modal-bgd modal-active">
+    <div class="modal-cont">
+    <button class="modal-close-btn">
+      <img src="./img/icons/close-icon.svg" alt="close-icon" class="modal-close-icon">
+    </button>
+    <img src="./img/icons/" alt="email-picture" class="modal-email-icon">
+    <h4 class="modal-title">Ваш запрос принят.<br>Спасибо.</h4>
+
+
+    </div>
+</div>
 
   </body>
 </html>
