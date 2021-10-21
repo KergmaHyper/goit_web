@@ -24,6 +24,12 @@ const prices = {
         qa: 1300
     }
 };
+function resetCheckForm() {
+    document.getElementById('pm').checked = false;
+    document.getElementById('design').checked = false;
+    document.getElementById('devel').checked = false;
+    document.getElementById('qa').checked = false;
+    }
 function getFormValue() {
     let websiteTypeElement = document.getElementById('proj-type');
     let pmEl = document.getElementById('pm');
@@ -39,13 +45,6 @@ function getFormValue() {
     }
 }
 
-function resetCheckForm() {
-    document.getElementById('pm').checked = false;
-    document.getElementById('design').checked = false;
-    document.getElementById('devel').checked = false;
-    document.getElementById('qa').checked = false;
-    // console.log('form reset.')
-}
 function calcPrice() {
     let values = getFormValue();
     let totalPrice = 0;
@@ -56,22 +55,47 @@ function calcPrice() {
     if (values.qa) { totalPrice += workType.qa };
     let totalPriceEl = document.getElementById('total-price');
     totalPriceEl.textContent = totalPrice;
-    // console.log(totalPrice);
+    
 }
+
+calcPrice();
 const formElement = document.getElementById('proj-price-form');
 formElement.addEventListener('change', calcPrice);
 
-const selEl = document.getElementById('proj-type');
-
-const emailModalEl = document.getElementById('modal-email');
-
-// selEl.addEventListener('change', resetCheckForm);
-
-console.log(formElement);
 
 
 formElement.addEventListener('submit', function (event) {
-     event.preventDefault;
-    event.
+    event.preventDefault();
+    let usrEmailInputEl = document.getElementById('user-email');
+    usrEmailInputEl.value = '';
+    let emailModalEl = document.getElementById('modal-email');
     emailModalEl.classList.add('modal-active');
+
+});
+const closeBtnEls = document.querySelectorAll('.modal-close-btn');
+
+closeBtnEls.forEach(function (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+        let actModForms = document.querySelectorAll('.modal-active');
+        actModForms.forEach(function (actModForm ){
+             actModForm.classList.remove('modal-active');
+            
+        });
+    });
+});
+
+const emailContForm = document.getElementById('email-cont-form');
+emailContForm.addEventListener('submit', function (evn) {
+    evn.preventDefault();
+    let usrEmailInputEl = document.getElementById('user-email');
+    if (usrEmailInputEl.value) {
+        let modEmail = document.getElementById('modal-email');
+        modEmail.classList.remove('modal-active');
+        let modSucc = document.getElementById('modal-success');
+        modSucc.classList.add('modal-active');
+    } else {
+        let emailInputContEl = document.querySelector('.email-input-cont');
+        emailInputContEl.classList.add('email-input-cont-err');
+    }
+
 });

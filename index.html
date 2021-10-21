@@ -99,8 +99,6 @@
             </div>
             </select>
 
-                 
-
             <div class="active-type">
               <p class="active-type-head">Тип работ</p>
 
@@ -134,45 +132,41 @@
               
             </div>
           </form>
-        
         </section>
-    
   </div>
 
   <!-- modal screens -->
 
   <div class="modal-bgd" id="modal-email">
     <div class="modal-cont">
-
-      <button class="modal-close-btn">
+      <button class="modal-close-btn" id="modal-close-btn1">
         <img src="./img/icons/close-icon.svg" alt="close-icon" class="modal-close-icon">
       </button>
       <img src="./img/icons/mail-icon.svg" alt="email-picture" class="modal-email-icon">
-      
       <h4 class="modal-title">Я свяжусь с Вами<br>в течении часа</h4>
-      <form action="#" class="modal-cont-form">
-
-        <label for="user-email" class="modal-email-label">E-mail:</label>
-        <input type="email" name="user-email" id="user-email" class="modal-email-input" placeholder="Укажите e-mail">
-        
+      <form action="#" class="modal-cont-form" id="email-cont-form" >
+        <!-- input email block -->
+        <div class="email-input-cont">
+            <label for="user-email" class="modal-email-label">E-mail:</label>
+            <input type="email" name="user-email" id="user-email" class="modal-email-input" placeholder="Укажите e-mail">
+            <p class="email-err-txt">Проверьте e-mail адресс</p>
+        </div>
+          <!-- send button -->
         <div class="send-req-cont">
-        <button type="submit" class="send-req">Отправить</button>
+        <button  class="send-req" id="send-btn">Отправить</button>
         </div>
       </form>
     </div>
 
   </div>
 
-<div class="modal-bgd">
+<div class="modal-bgd" id="modal-success">
     <div class="modal-cont modal-cont-succ">
-
-    <button class="modal-close-btn">
+    <button class="modal-close-btn"  id="modal-close-btn2">
       <img src="./img/icons/close-icon.svg" alt="close-icon" class="modal-close-icon">
     </button>
       <img src="./img/icons/check-ok.svg" alt="check-ok" class="check-ok">
     <p class="modal-title">Ваш запрос принят.<br>Спасибо.</p>
-
-
     </div>
 </div>
 
