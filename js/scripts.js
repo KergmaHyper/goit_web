@@ -46,12 +46,6 @@ function resetCheckForm() {
     document.getElementById('qa').checked = false;
     // console.log('form reset.')
 }
-const formElement = document.getElementById('proj-price-form');
-formElement.addEventListener('change', calcPrice);
-
-const selEl = document.getElementById('proj-type');
-selEl.addEventListener('change', resetCheckForm);
-
 function calcPrice() {
     let values = getFormValue();
     let totalPrice = 0;
@@ -64,3 +58,20 @@ function calcPrice() {
     totalPriceEl.textContent = totalPrice;
     // console.log(totalPrice);
 }
+const formElement = document.getElementById('proj-price-form');
+formElement.addEventListener('change', calcPrice);
+
+const selEl = document.getElementById('proj-type');
+
+const emailModalEl = document.getElementById('modal-email');
+
+// selEl.addEventListener('change', resetCheckForm);
+
+console.log(formElement);
+
+
+formElement.addEventListener('submit', function (event) {
+     event.preventDefault;
+    event.
+    emailModalEl.classList.add('modal-active');
+});
