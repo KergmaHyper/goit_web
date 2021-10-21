@@ -89,11 +89,28 @@ emailContForm.addEventListener('submit', function (evn) {
     evn.preventDefault();
     let usrEmailInputEl = document.getElementById('user-email');
     if (usrEmailInputEl.value) {
-        let modEmail = document.getElementById('modal-email');
-        modEmail.classList.remove('modal-active');
-        let modSucc = document.getElementById('modal-success');
-        modSucc.classList.add('modal-active');
+        
+        // send form
+        // let myForm = document.getElementById('pizzaOrder');
+        let formData = new FormData(formElement);
+        formData.append('Email', usrEmailInputEl.value);
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        })
+            .then(function () {
+                // success submit
+                let modEmail = document.getElementById('modal-email');
+                modEmail.classList.remove('modal-active');
+                let modSucc = document.getElementById('modal-success');
+                modSucc.classList.add('modal-active');  
+            }).
+            catch((error) => alert(error));
+        return;
+
     } else {
+        // error email
         let emailInputContEl = document.querySelector('.email-input-cont');
         emailInputContEl.classList.add('email-input-cont-err');
     }

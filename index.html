@@ -84,7 +84,7 @@
 
         <!-- project price -->
         <section class="proj-price-section"> 
-          <form class="proj-price-form"  id="proj-price-form" >
+          <form class="proj-price-form"  id="proj-price-form" name="contact" method="POST" data-netlify="true" netlify>
 
             <h4 class="head-price">Расчитать стоимость проекта</h4>
             <div class="proj-type-cont">
@@ -131,6 +131,7 @@
               <button type="submit" class="send-req">Отправить запрос</button>
               
             </div>
+          <input type="hidden" name="Email">
           </form>
         </section>
   </div>
@@ -153,7 +154,7 @@
         </div>
           <!-- send button -->
         <div class="send-req-cont">
-        <button  class="send-req" id="send-btn">Отправить</button>
+        <button  type="submit" class="send-req" id="send-btn">Отправить</button>
         </div>
       </form>
     </div>
