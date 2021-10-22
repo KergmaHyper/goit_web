@@ -88,12 +88,14 @@ const emailContForm = document.getElementById('email-cont-form');
 emailContForm.addEventListener('submit', function (evn) {
     evn.preventDefault();
     let usrEmailInputEl = document.getElementById('user-email');
+    let priceCalcEl = document.getElementById('price-calculated');
     if (usrEmailInputEl.value) {
         
         // send form
         // let myForm = document.getElementById('pizzaOrder');
         let formData = new FormData(formElement);
         formData.append('Email', usrEmailInputEl.value);
+        formData.append('Price', priceCalcEl.textContent);
         fetch('/', {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
